@@ -205,22 +205,86 @@ Now let's understand what each part of the code means:
 
 ---
 
-## Next Steps
+## Visual Output
 
-Now that you have Ollama running locally and integrated with VS Code, you can:
+As you can see, we've received a valid response from Ollama.
 
-1. **Build custom models** using Modelfiles
-2. **Create Power Automate flows** that call Ollama APIs
-3. **Automate business processes** with local AI
-4. **Experiment with different models** for various use cases
+![VS Code and Prompt Generation for Ollama](assets/vscode-ollama.png)
+
+You can also adjust parameters like `temperature`, `top_p`, and `repeat_penalty` for more control.
+
+---
+
+## Integrate Ollama with Power Automate
+
+You can connect Ollama to Power Automate by triggering HTTP flows using Python or any backend script. For example, after getting a response from Ollama, you can forward it to Power Automate using a simple POST request. Alternatively, you can use this code and replace the URL with your own to utilize it.
+
+**Make sure you have already created a flow in Power Automate with a "When an HTTP request is received" trigger.**
+
+As you can see, the Python script successfully triggers the Power Automate flow.
+
+![Integrate Ollama with Power Automate](assets/power-automate-integration.png)
+
+And as you can see the Python script is triggering the flow successfully.
+
+![Power Automate Flow Triggered](assets/flow-triggered.png)
+
+### Here's the Code
+
+```python
+import ollama
+import requests
+
+# Step 1: Get response from Ollama
+response = ollama.chat(
+    model='mistral',
+    messages=[
+        {'role': 'user', 'content': 'Explain quantum computing in simple terms'}
+    ],
+    options={'temperature': 0.8}
+)
+
+result_text = response['message']['content']
+
+# Step 2: Send response to Power Automate
+flow_url = 'https://prod-xxx.westus.logic.azure.com:443/workflows/xyz/triggers/manual/paths/invoke?...'  # Replace with your real URL
+
+payload = {
+    'response': result_text
+}
+
+headers = {
+    'Content-Type': 'application/json'
+}
+
+r = requests.post(flow_url, json=payload, headers=headers)
+print(f"Power Automate Status Code: {r.status_code}")
+```
+
+### Step-by-Step Integration
+
+For detailed step-by-step integration, refer to my other blog:
+
+**[Python Meets Power Automate: Trigger via URL](https://blogs.perficient.com/)**
 
 ---
 
 ## Conclusion
 
-Ollama represents a significant shift in how we can leverage AI — bringing powerful language models directly to your machine without cloud dependencies. Combined with Power Automate and VS Code, you have a complete toolkit for building intelligent, automated, and privacy-focused applications.
+Now you know how to:
 
-Start experimenting today and discover what's possible when AI runs locally on your terms.
+✅ Install and run Ollama locally  
+✅ Download and interact with models  
+✅ Use Ollama in VS Code  
+✅ Integrate Ollama with Power Automate
+
+---
+
+## Coming Up Next
+
+In the next part of this series, we'll explore how to **create your own model** using Ollama and run it using a **Modelfile**.
+
+Stay tuned!
 
 ---
 
