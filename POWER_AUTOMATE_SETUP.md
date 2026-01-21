@@ -19,6 +19,7 @@ Complete guide for integrating Ollama with Microsoft Power Automate flows.
 5. Click **Create**
 
 ### Step 2: Configure HTTP Trigger
+<img width="750" height="355" alt="image" src="https://github.com/user-attachments/assets/78f83761-cd9f-4988-932e-4426e3cb5e72" />
 
 1. The trigger will generate a URL after you save the flow
 2. Click **Use sample payload to generate schema**
@@ -79,6 +80,7 @@ Complete guide for integrating Ollama with Microsoft Power Automate flows.
 ## Part 2: Python Integration
 
 ### Basic Integration Example
+<img width="750" height="473" alt="image" src="https://github.com/user-attachments/assets/9fa762be-4210-42ca-bafe-cb5f6577015e" />
 
 ```python
 import ollama
