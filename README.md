@@ -171,4 +171,4 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 - [Model Library](https://ollama.com/library)
 - [Python Package Documentation](https://github.com/ollama/ollama-python)
 
-
+-https://blogs.perficient.com/2025/07/30/ollama-power-automate-integration/
