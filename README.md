@@ -1,6 +1,6 @@
 # Ollama Integration: Power Automate + VS Code
 
-> **Run local AI models seamlessly with Power Automate workflows and VS Code development**
+> **Run local AI models seamlessly with Power Automate workflows and VS Code development**  
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-green.svg)](https://ollama.com/)
@@ -12,22 +12,33 @@ This repository demonstrates how to integrate **Ollama** — a local Large Langu
 
 ### Why This Matters
 
-- **🔒 Privacy-First**: Keep sensitive data local — no cloud APIs required
-- **⚡ Real-Time Automation**: Trigger AI-powered workflows with Power Automate
-- **🛠️ Developer-Friendly**: Full VS Code integration with Python
-- **🌐 Offline Capable**: Works without internet connectivity
-- **🎯 Custom Models**: Build and deploy your own models using Modelfiles
+- **Privacy-First**: Keep sensitive data local — no cloud APIs required
+- **Real-Time Automation**: Trigger AI-powered workflows with Power Automate
+- **Developer-Friendly**: Full VS Code integration with Python
+- **Offline Capable**: Works without internet connectivity
+- **Custom Models**: Build and deploy your own models using Modelfiles
 
 ## Features
 
-- ✅ Complete Ollama installation and setup guide
-- ✅ Terminal command reference for model management
-- ✅ VS Code Python integration examples
-- ✅ Power Automate workflow templates
-- ✅ Model interaction best practices
-- ✅ Local API server configuration
+- Complete Ollama installation and setup guide
+- Terminal command reference for model management
+- VS Code Python integration examples
+- Power Automate workflow templates
+- Model interaction best practices
+- Local API server configuration
 
 ## Quick Start
+
+## Simple Flowchart
+
+```mermaid
+flowchart TD
+   A[User or system event] --> B[Power Automate flow]
+   B --> C[Python script in VS Code]
+   C --> D[Ollama local model]
+   D --> E[Model response]
+   E --> F[Automated action (email, Teams, SharePoint, approval)]
+```
 
 ### Prerequisites
 
@@ -111,29 +122,19 @@ While interacting with a model:
 
 ## Documentation
 
-**📘 Main Guides:**
+**Main Guides:**
 - **[blog.md](blog.md)** - Complete tutorial and walkthrough
 - **[POWER_AUTOMATE_SETUP.md](POWER_AUTOMATE_SETUP.md)** - Detailed Power Automate integration guide
-- **[GITHUB_SETUP.md](GITHUB_SETUP.md)** - Instructions for pushing to GitHub
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** - Contribution guidelines
 
-**What you'll learn:**
-- What Ollama is and why you need it
-- Complete installation walkthrough
-- Model selection and management
-- VS Code Python integration
-- Power Automate workflow creation
-- Advanced customization options
 
 ## Available Models
-
+(make sure you have enough space to download and run the model, choose smaller ones in the beginning.)
 Explore models at [ollama.com/library](https://ollama.com/library):
 
 - **llama2** - Meta's powerful open-source model
-- **mistral** - Fast and efficient 7B parameter model
+- **mistral** - Fast and efficient 7B parameter model (recommeded)
 - **gemma** - Google's lightweight AI model
-- **codellama** - Specialized for code generation
-- **phi** - Microsoft's small but capable model
+
 
 ## Power Automate Integration
 
@@ -144,25 +145,14 @@ This project enables you to:
 3. Summarize content for SharePoint
 4. Log AI interactions to Teams
 5. Create custom approval workflows
+6. Basically you can customize it to do and say whatever you want!
 
-## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, open an issue first to discuss proposed changes.
-
-## Troubleshooting
-
-**Model not responding?**
-- Ensure Ollama is running: `ollama serve`
-- Check if model is downloaded: `ollama list`
 
 **Connection issues?**
-- Verify Ollama is running on port 11434 (default)
+- Verify Ollama is running on port 11434 (default) or try running ollama serve on your cmd
 - Check firewall settings for localhost connections
 
-**Performance issues?**
-- Close unnecessary applications
-- Use smaller models (e.g., phi instead of llama2)
-- Adjust temperature settings for faster responses
 
 ## Resources
 
