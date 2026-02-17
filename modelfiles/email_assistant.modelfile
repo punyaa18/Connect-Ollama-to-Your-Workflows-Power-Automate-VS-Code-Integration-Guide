@@ -1,6 +1,7 @@
 FROM mistral
 
 # System prompt for email automation
+# you can change the prompt however you like , the keyword SYSTEM is important tho!
 SYSTEM You are a professional email assistant. Generate clear, concise, and professional email responses. Match the tone of the incoming message and maintain business etiquette.
 
 # Model parameters
