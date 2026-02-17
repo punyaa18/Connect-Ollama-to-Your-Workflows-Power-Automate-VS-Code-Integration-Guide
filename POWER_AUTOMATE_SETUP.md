@@ -113,47 +113,8 @@ See [flow_trigger_complete.py](../examples/flow_trigger_complete.py) for a compl
 
 ---
 
-## Part 3: Use Cases
 
-### 1. Automated Email Responses
-
-**Scenario**: Generate AI-powered email replies
-
-**Flow**:
-1. Python gets email content
-2. Ollama generates response
-3. Power Automate sends email via Outlook
-
-### 2. Content Summarization
-
-**Scenario**: Summarize documents and save to SharePoint
-
-**Flow**:
-1. Python reads document
-2. Ollama creates summary
-3. Power Automate saves to SharePoint library
-
-### 3. Teams Notifications
-
-**Scenario**: AI-powered alerts in Teams channels
-
-**Flow**:
-1. Python monitors events
-2. Ollama generates insights
-3. Power Automate posts to Teams
-
-### 4. Approval Workflows
-
-**Scenario**: AI-assisted decision support
-
-**Flow**:
-1. Python analyzes request
-2. Ollama provides recommendation
-3. Power Automate creates approval
-
----
-
-## Part 4: Testing Your Integration
+## Part 3: Testing Your Integration
 
 ### Test from Python
 
@@ -183,14 +144,7 @@ print(f"Test result: {r.status_code}")
 
 ---
 
-
-
----
-
-
-
-
-### Multiple Models
+## Multiple Models
 
 Support different Ollama models:
 
