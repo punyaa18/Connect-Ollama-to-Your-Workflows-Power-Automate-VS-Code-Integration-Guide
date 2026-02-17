@@ -1,10 +1,7 @@
 # Ollama Integration: Power Automate + VS Code
 
-> **Run local AI models seamlessly with Power Automate workflows and VS Code development**  
+> **Run local AI models seamlessly with Power Automate workflows and VS Code development, YAY**  
 
-[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-green.svg)](https://ollama.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Overview
 
