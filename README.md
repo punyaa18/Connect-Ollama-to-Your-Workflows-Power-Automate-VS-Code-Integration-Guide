@@ -37,7 +37,7 @@ flowchart TD
    B --> C[Python script in VS Code]
    C --> D[Ollama local model]
    D --> E[Model response]
-   E --> F[Automated action (email, Teams, SharePoint, approval)]
+   E --> F["Automated action (email, Teams, SharePoint, approval)"]
 ```
 
 ### Prerequisites
