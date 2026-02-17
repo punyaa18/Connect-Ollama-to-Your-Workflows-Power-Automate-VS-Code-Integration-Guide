@@ -183,86 +183,12 @@ print(f"Test result: {r.status_code}")
 
 ---
 
-## Part 5: Troubleshooting
 
-### Common Issues
-
-**❌ 404 Not Found**
-- Flow URL is incorrect or flow was deleted
-- Verify the URL in Power Automate
-
-**❌ 401 Unauthorized**
-- Some flows require authentication
-- Add authentication to your Python request
-
-**❌ Timeout Errors**
-- Increase timeout in Python: `requests.post(..., timeout=60)`
-- Check if Ollama response is taking too long
-
-**❌ Schema Validation Errors**
-- Ensure your payload matches the schema
-- Check for required fields
-
-### Debugging Tips
-
-1. **Check Flow Run History**
-   - Go to your flow in Power Automate
-   - Click "Run history"
-   - View detailed execution logs
-
-2. **Add Response Action**
-   - Add "Response" action in Power Automate
-   - Return data to Python for debugging
-
-3. **Enable Logging**
-   ```python
-   import logging
-   logging.basicConfig(level=logging.DEBUG)
-   ```
 
 ---
 
-## Part 6: Security Best Practices
 
-### Protect Your Flow URL
 
-❌ **Don't**:
-- Commit URLs to public repositories
-- Share URLs in documentation
-- Hardcode URLs in shared scripts
-
-✅ **Do**:
-- Use environment variables
-- Store in `.env` files (add to `.gitignore`)
-- Use Azure Key Vault for production
-
-### Example with Environment Variables
-
-```python
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-FLOW_URL = os.getenv('POWER_AUTOMATE_FLOW_URL')
-```
-
-Create `.env` file:
-```
-POWER_AUTOMATE_FLOW_URL=https://prod-##.westus.logic.azure.com:443/...
-```
-
----
-
-## Part 7: Advanced Features
-
-### Conditional Logic in Flow
-
-Add conditions based on AI response:
-
-1. Add **Condition** action
-2. Check if `response` contains specific keywords
-3. Branch to different actions based on result
 
 ### Multiple Models
 
@@ -278,20 +204,5 @@ payload = {
 
 In Power Automate, route based on model type.
 
-### Error Handling in Flow
 
-1. Add **Scope** action to group steps
-2. Add **Parallel branch** with error handling
-3. Send error notifications if something fails
 
----
-
-## Resources
-
-- [Power Automate Documentation](https://learn.microsoft.com/en-us/power-automate/)
-- [Ollama Python Library](https://github.com/ollama/ollama-python)
-- [Example Scripts](../examples/)
-
----
-
-**Ready to automate? Start building your AI-powered workflows today! 🚀**
