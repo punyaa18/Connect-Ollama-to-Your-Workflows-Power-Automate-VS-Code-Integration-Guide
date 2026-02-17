@@ -15,14 +15,7 @@ This repository demonstrates how to integrate **Ollama** — a local Large Langu
 - **Offline Capable**: Works without internet connectivity
 - **Custom Models**: Build and deploy your own models using Modelfiles
 
-## Features
 
-- Complete Ollama installation and setup guide
-- Terminal command reference for model management
-- VS Code Python integration examples
-- Power Automate workflow templates
-- Model interaction best practices
-- Local API server configuration
 
 ## Quick Start
 
